@@ -21,12 +21,12 @@ const createWindow = () => {
 app.whenReady().then(() => {
     createWindow()
     app.on('activate', () => {
-        if(BrowserWindow.getAllWindows().lengeh === 0) createWindow()
+        if(BrowserWindow.getAllWindows().length === 0) createWindow()
     })
 })
 
 app.on('window-all-closed', () => {
-    if (process.plateform !== 'darwin') {
+    if (process.platform !== 'darwin') {
         app.quit()
     }
 })

@@ -1,24 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <button @click="goAbout">About</button>
+  <button @click="goHome">Home</button>
+  <router-view></router-view>
 </template>
 
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import { useIpcRenderer } from '@vueuse/electron'
-const ipcRenderer = useIpcRenderer()
-ipcRenderer.send("window-new", 'im-render') // 向主进程通信
+// import { useIpcRenderer } from '@vueuse/electron'
+// const ipcRenderer = useIpcRenderer()
+// ipcRenderer.send("window-new", 'im-render') // 向主进程通信
+
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+function goAbout() {
+  router.push('/about')
+}
+function goHome() {
+  router.push('/')
+}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

@@ -11,16 +11,16 @@ import polyfillExports from 'vite-plugin-electron/polyfill-exports'
 export default defineConfig({
   plugins: [
     vue(),
-    electron({
-      main: {
-        entry: "./electron/main.js"
-      },
-      preload: {
-        input: path.join(__dirname, "./electron/preload.js")
-      }
-    }),
-    electronRenderer(),
-    polyfillExports()
+    // electron({
+    //   main: {
+    //     entry: "./electron/main.ts"
+    //   },
+    //   preload: {
+    //     input: path.join(__dirname, "./electron/preload.ts")
+    //   }
+    // }),
+    // electronRenderer(),
+    // polyfillExports()
   ],
   build: {
     emptyOutDir: false
