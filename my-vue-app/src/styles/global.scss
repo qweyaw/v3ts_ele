@@ -1,0 +1,36 @@
+html, body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentWrap {
+    height: calc(100vh - 64px);
+}
+.bg_white {
+    background-color: white;
+}
+.flex-space-bwn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-space-ard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
